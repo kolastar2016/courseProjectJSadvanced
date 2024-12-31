@@ -4,7 +4,7 @@ const BASE_URL = 'https://api.openweathermap.org/data/2.5';
 class WeatherAPI {
     static async fetchWeather(city, units = 'metric') {
         try {
-            const url = `${BASE_URL}/weather?q=${city}&units=${units}&appid=${API_KEY}`;
+            const url = `${BASE_URL}/weather?q=${city}&units=${units}&appid=${API_KEY}&lang=ua`;
             // console.log(`Fetching: ${url}`);
             const response = await fetch(url);
             if (!response.ok) {
@@ -19,7 +19,7 @@ class WeatherAPI {
 
     static async fetchForecast(city, units = 'metric') {
         try {
-            const response = await fetch(`${BASE_URL}/forecast?q=${city}&units=${units}&appid=${API_KEY}`);
+            const response = await fetch(`${BASE_URL}/forecast?q=${city}&units=${units}&appid=${API_KEY}&lang=ua`);
             if (!response.ok) {
                 throw new Error(`Failed to fetch forecast for ${city}`);
             }
