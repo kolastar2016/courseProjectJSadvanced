@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="./styles/style.css" />
+
+</head>
+
+<body>
+    <div id="app">
+        <h1>Weather Forecast</h1>
+        <div id="controls">
+            <button id="current-weather-btn">Current Weather</button>
+            <button id="forecast-btn">5-Day Forecast</button>
+            <label for="unit-toggle">Units:</label>
+            <select id="unit-toggle">
+                <option value="metric">°C</option>
+                <option value="imperial">°F</option>
+            </select>
+        </div>
+        <div id="weather-container"></div>
+        <div id="forecast-container" class="hidden">
+            <table id="forecast-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Temperature</th>
+                        <th>Weather</th>
+                        <th>Wind</th>
+                        <th>Pressure</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
